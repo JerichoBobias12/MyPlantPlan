@@ -5,5 +5,7 @@
     <color name="text">#124912</color>
     <color name="lightgreen">#57C84D</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
 
 </resources>
