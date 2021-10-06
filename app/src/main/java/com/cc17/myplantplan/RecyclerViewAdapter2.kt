@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.cc17.myplantplan.Plant
-import com.cc17.myplantplan.R
 import com.bumptech.glide.Glide
+import com.example.myplantplan.R
 import kotlinx.android.synthetic.main.itemcard.view.*
 
 class RecyclerViewHolder2(val v:View):RecyclerView.ViewHolder(v)
@@ -36,7 +36,6 @@ class  RecyclerViewAdapter2 (val context:Context):ListAdapter<Plant,RecyclerView
     override fun onBindViewHolder(holder: RecyclerViewHolder2, position: Int) {
         var name=getItem(position)
         holder.v.plant_name.text=name.name
-        holder.v.plant_price.text=name.price
         Glide.with(holder.itemView.context).load(name.image).into(holder.v.plant_image)
         val bundle= bundleOf("details" to name)
         holder.itemView.setOnClickListener {

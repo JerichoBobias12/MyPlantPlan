@@ -38,7 +38,7 @@ class HomeFragment : Fragment(),CaterogyClicked {
         Handler().postDelayed({
             recycler2.apply {
                 adapter=RecyclerViewAdapter2(this@HomeFragment.requireContext()).also {
-                    it.submitList(MockData3.catergoryplants())
+                    it.submitList(MockData3.categoryplants())
                 }
                 layoutManager=GridLayoutManager(this@HomeFragment.requireContext(),2)
             }

@@ -1,5 +1,7 @@
 package com.cc17.myplantplan
 
+import com.example.myplantplan.R
+
 object MockData {
     fun catergoryNames(): MutableList<Category> {
         val category = mutableListOf<Category>()
@@ -15,21 +17,21 @@ object MockData {
                 "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
             )
             val plant2 = Plant(
-                "",
+                "Tomato",
                 R.drawable.image2,
                 "Medium",
                 "Plant",
                 "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
             )
             val plant3 = Plant(
-                "Kaktus Pus",
+                "Eggplant",
                 R.drawable.image6,
                 "Large",
                 "Plant",
                 "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
             )
             val plant4 = Plant(
-                "Arecaceae",
+                "Raddish",
                 R.drawable.image3,
                 "Small",
                 "Plant",
@@ -40,13 +42,13 @@ object MockData {
             det3.add(plant3)
             det3.add(plant4)
             val cate = Category("Recent", det3)
-            var details2 = Plant("Suculenta", "$12.50", R.drawable.image3, "Medium", "Plantis", "")
-            var details3 = Plant("Alium", "$22", R.drawable.image6, "Large", "Plantis", "")
-            var details4 = Plant("Monstero", "$9.50", R.drawable.image2, "Small", "Plantis", "")
+            var details2 = Plant("Suculenta", R.drawable.image3, "Medium", "Plantis", "")
+            var details3 = Plant("Alium", R.drawable.image6, "Large", "Plantis", "")
+            var details4 = Plant("Monstero", R.drawable.image2, "Small", "Plantis", "")
             det2.add(details2)
             det2.add(details3)
             det2.add(details4)
-            val cate3 = Category("Indoor", det2)
+            val cate3 = Category("Root", det2)
             val cate4 = Category("Outdoor", det3)
             val cate5 = Category("Special", det2)
 
