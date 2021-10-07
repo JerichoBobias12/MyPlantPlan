@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/drawable/btn.xml" value="0.2074074074074074" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/drawable/ic_cwmpermissions_dark.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/drawable/ic_showpassed_dark.xml" value="0.18796296296296297" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/drawable/roundedbut.xml" value="0.19537037037037036" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/drawable/signup.xml" value="0.21296296296296297" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/drawable/signuppage.xml" value="0.21296296296296297" />
@@ -16,9 +17,10 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/activity_plantcheck.xml" value="0.17572463768115942" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/caterogycard.xml" value="0.17572463768115942" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/contactus.xml" value="0.22" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/dashboard.xml" value="0.1" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/fragment_details.xml" value="0.18" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/dashboard.xml" value="0.18" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/fragment_details.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/guide.xml" value="0.12" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/itemcard.xml" value="0.17572463768115942" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/login.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyPlantPlan2/app/src/main/res/layout/register.xml" value="0.16" />

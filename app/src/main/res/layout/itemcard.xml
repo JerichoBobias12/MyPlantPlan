@@ -20,7 +20,7 @@
             android:layout_height="200dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/image1"
+        android:src="@drawable/carrot"
         android:scaleType="fitCenter"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"></ImageView>
@@ -39,25 +39,13 @@
             android:id="@+id/plant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Agloabena"
-            android:textColor="#ffffff"
-            app:layout_constraintTop_toBottomOf="@id/fav"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"
             android:textSize="20sp"
-            android:layout_marginTop="10dp"/>
-
-        <TextView
-            android:id="@+id/plant_price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="$12.50"
-            android:textColor="#ffffff"
-            app:layout_constraintTop_toBottomOf="@id/plant_name"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:textSize="20sp"></TextView>
+            app:layout_constraintTop_toBottomOf="@id/fav"
+            tools:text="Carrot" />
 
 
         <com.google.android.material.button.MaterialButton

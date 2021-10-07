@@ -47,6 +47,7 @@
                     >
 
                     <ImageView
+                        android:id="@+id/btnChecker"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:src="@drawable/plant"
@@ -80,6 +81,7 @@
                     >
 
                     <ImageView
+                        android:id="@+id/btnGuide"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:src="@drawable/book"
@@ -113,6 +115,7 @@
                     >
 
                     <ImageView
+                        android:id="@+id/btnCalendar"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:src="@drawable/calendar"
@@ -145,6 +148,7 @@
                     >
 
                     <ImageView
+                        android:id="@+id/btnContact"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:src="@drawable/contact"
@@ -178,6 +182,7 @@
                     >
 
                     <ImageView
+                        android:id="@+id/btnFeedback"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:src="@drawable/feedback"
@@ -211,6 +216,7 @@
                     >
 
                     <ImageView
+                        android:id="@+id/btnSettings"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:src="@drawable/settings"
