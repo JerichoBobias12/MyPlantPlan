@@ -1,12 +1,9 @@
-package com.cc17.myplantplan
-
+package com.example.myplantplan
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.myplantplan.R
-
 class Calendar : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_calendar)
+        setContentView(R.layout.calendar)
     }
 }

@@ -1,4 +1,4 @@
-package com.cc17.myplantplan
+package com.example.myplantplan
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,14 +8,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.app.plantstoreapp.MockData3
-import com.app.plantstoreapp.RecyclerViewAdapter2
 import kotlinx.android.synthetic.main.fragment_home.*
 import android.os.Handler
-import com.example.myplantplan.R
-import kotlinx.android.synthetic.main.shimmercard.*
 
-class HomeFragment : Fragment(),CaterogyClicked {
+
+class PlantChecker : Fragment(),CaterogyClicked {
 
 
     override fun onCreateView(
@@ -29,18 +26,18 @@ class HomeFragment : Fragment(),CaterogyClicked {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         recycler1.apply {
-            adapter=RecyclerViewAdapter(this@HomeFragment.requireContext(),this@HomeFragment).also {
+            adapter=RecyclerViewAdapter(this@PlantChecker.requireContext(),this@PlantChecker).also {
                 it.submitList(MockData.catergoryNames())
             }
-            layoutManager= LinearLayoutManager(this@HomeFragment.requireContext(),
+            layoutManager= LinearLayoutManager(this@PlantChecker.requireContext(),
                 RecyclerView.HORIZONTAL,false)
         }
         Handler().postDelayed({
             recycler2.apply {
-                adapter=RecyclerViewAdapter2(this@HomeFragment.requireContext()).also {
+                adapter=RecyclerViewAdapter2(this@PlantChecker.requireContext()).also {
                     it.submitList(MockData3.categoryplants())
                 }
-                layoutManager=GridLayoutManager(this@HomeFragment.requireContext(),2)
+                layoutManager=GridLayoutManager(this@PlantChecker.requireContext(),2)
             }
             shimmer_container.stopShimmer()
             shimmer_container.visibility=View.GONE
@@ -55,10 +52,10 @@ class HomeFragment : Fragment(),CaterogyClicked {
 
     override fun categotyClicked(plant: MutableList<Plant>) {
         recycler2.apply {
-            adapter= RecyclerViewAdapter2(this@HomeFragment.requireContext()).also {
+            adapter= RecyclerViewAdapter2(this@PlantChecker.requireContext()).also {
                 it.submitList(plant)
             }
-            layoutManager= GridLayoutManager(this@HomeFragment.requireContext(),2)
+            layoutManager= GridLayoutManager(this@PlantChecker.requireContext(),2)
         }
     }
 

@@ -1,4 +1,4 @@
-package com.cc17.myplantplan
+package com.example.myplantplan
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

@@ -1,4 +1,4 @@
-package com.cc17.myplantplan
+package com.example.myplantplan
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myplantplan.R
-import kotlinx.android.synthetic.main.caterogycard.view.*
+import kotlinx.android.synthetic.main.categorycard.view.*
 
 
 class RecyclerViewHolder(val v: View): RecyclerView.ViewHolder(v)
@@ -28,7 +27,7 @@ class  RecyclerViewAdapter (val context: Context, private val caterogyClicked: C
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         return RecyclerViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.caterogycard, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.categorycard, parent, false)
         )
     }
 

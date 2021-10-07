@@ -6,7 +6,8 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.cc17.myplantplan.*
+import com.cc17.myplantplan.SettingsActivity
+import kotlinx.android.synthetic.main.settings.*
 
 
 class Dashboard : AppCompatActivity(){
@@ -16,7 +17,7 @@ class Dashboard : AppCompatActivity(){
         setContentView(R.layout.dashboard)
         val btnPlantChecker = findViewById<ImageView>(R.id.btnChecker)
         btnPlantChecker.setOnClickListener{
-            val intent = Intent(this, PlantCheck::class.java)
+            val intent = Intent(this, PlantChecker::class.java)
             startActivity(intent)
         }
         val btnGuide = findViewById<ImageView>(R.id.btnGuide)
@@ -24,7 +25,6 @@ class Dashboard : AppCompatActivity(){
             val intent = Intent(this, Guide::class.java)
             startActivity(intent)
         }
-
         val btnFeedback = findViewById<ImageView>(R.id.btnFeedback)
         btnFeedback.setOnClickListener{
             val intent = Intent(this,Feedback::class.java)
@@ -37,9 +37,8 @@ class Dashboard : AppCompatActivity(){
         }
         val btnCall = findViewById<ImageView>(R.id.btnContact)
         btnCall.setOnClickListener {
-            val intent =Intent(this,ContactUs::class.java)
-            startActivity(intent)
-
+            val intentCall = Intent(this, ContactUs::class.java)
+                startActivity(intentCall)
         }
         val btnCalendar = findViewById<ImageView>(R.id.btnCalendar)
         btnCalendar.setOnClickListener{
@@ -48,4 +47,3 @@ class Dashboard : AppCompatActivity(){
         }
     }
 }
-

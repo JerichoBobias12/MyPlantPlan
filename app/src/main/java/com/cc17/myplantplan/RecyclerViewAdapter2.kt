@@ -1,4 +1,4 @@
-package com.app.plantstoreapp
+package com.example.myplantplan
 
 import android.content.Context
 import android.graphics.drawable.Drawable
@@ -10,7 +10,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.cc17.myplantplan.Plant
+import com.example.myplantplan.Plant
 import com.bumptech.glide.Glide
 import com.example.myplantplan.R
 import kotlinx.android.synthetic.main.itemcard.view.*

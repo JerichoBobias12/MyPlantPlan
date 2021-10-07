@@ -1,12 +1,22 @@
-package com.cc17.myplantplan
+package com.example.myplantplan
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import com.example.myplantplan.R
+import android.widget.Button
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
+import com.cc17.myplantplan.Thanks
 
 class Feedback : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_feedback)
+        setContentView(R.layout.feedback)
+
+        val btnThanks = findViewById<Button>(R.id.button)
+        btnThanks.setOnClickListener {
+            val intent = Intent(this, Thanks::class.java)
+            startActivity(intent)
+        }
+
     }
 }

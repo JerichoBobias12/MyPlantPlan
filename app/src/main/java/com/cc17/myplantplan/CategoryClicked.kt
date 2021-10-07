@@ -1,4 +1,4 @@
-package com.cc17.myplantplan
+package com.example.myplantplan
 
 interface CaterogyClicked {
     fun categotyClicked(plant:MutableList<Plant>)

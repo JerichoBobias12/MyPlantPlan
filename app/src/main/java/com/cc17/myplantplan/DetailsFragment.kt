@@ -1,4 +1,4 @@
-package com.cc17.myplantplan
+package com.example.myplantplan
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
