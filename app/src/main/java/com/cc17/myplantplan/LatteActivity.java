@@ -51,8 +51,8 @@ public class LatteActivity extends AppCompatActivity implements LoaderManager.Lo
 
         // setting the name of drink
 
-        drinnkName.setText("Lattee Tea");
-        imageView.setImageResource(R.drawable.late);
+        drinnkName.setText("Raddish");
+        imageView.setImageResource(R.drawable.rad);
 
         addtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +70,7 @@ public class LatteActivity extends AppCompatActivity implements LoaderManager.Lo
             @Override
             public void onClick(View v) {
                 // coffee price
-                int basePrice = 5;
+                int basePrice = 2;
                 quantity++;
                 displayQuantity();
                 int coffePrice = basePrice * quantity;
@@ -81,7 +81,7 @@ public class LatteActivity extends AppCompatActivity implements LoaderManager.Lo
                 // checkBoxes functionality
 
                 int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
-                coffeePrice.setText("$ " + ifCheckBox);
+                coffeePrice.setText("sq.foot " + ifCheckBox);
 
             }
         });
@@ -90,7 +90,7 @@ public class LatteActivity extends AppCompatActivity implements LoaderManager.Lo
             @Override
             public void onClick(View v) {
 
-                int basePrice = 5;
+                int basePrice = 2;
                 // because we dont want the quantity go less than 0
                 if (quantity == 0) {
                     Toast.makeText(LatteActivity.this, "Cant decrease quantity < 0", Toast.LENGTH_SHORT).show();
@@ -105,7 +105,7 @@ public class LatteActivity extends AppCompatActivity implements LoaderManager.Lo
                     // checkBoxes functionality
 
                     int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
-                    coffeePrice.setText("$ " + ifCheckBox);
+                    coffeePrice.setText("sq.foot " + ifCheckBox);
                 }
             }
         });
@@ -127,16 +127,16 @@ public class LatteActivity extends AppCompatActivity implements LoaderManager.Lo
         values.put(OrderContract.OrderEntry.COLUMN_QUANTITY, quantity);
 
         if (addExtraCream.isChecked()) {
-            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Has Cream: YES");
+            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Pure soil: YES");
         } else {
-            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Has Cream: NO");
+            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Pure soil: NO");
 
         }
 
         if (addToppings.isChecked()) {
-            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "Has Toppings: YES");
+            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "In pot : YES");
         } else {
-            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "Has Toppings: NO");
+            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "In pot: NO");
 
         }
 
@@ -157,7 +157,7 @@ public class LatteActivity extends AppCompatActivity implements LoaderManager.Lo
 
     private int CalculatePrice(CheckBox addExtraCream, CheckBox addToppings) {
 
-        int basePrice = 5;
+        int basePrice = 2;
 
         if (addExtraCream.isChecked()) {
             // add the cream cost $2
@@ -166,7 +166,7 @@ public class LatteActivity extends AppCompatActivity implements LoaderManager.Lo
 
         if (addToppings.isChecked()) {
             // topping cost is $3
-            basePrice = basePrice + 3;
+            basePrice = basePrice + 1;
         }
 
         return basePrice * quantity;
@@ -205,15 +205,15 @@ public class LatteActivity extends AppCompatActivity implements LoaderManager.Lo
             int name = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_NAME);
             int price = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_PRICE);
             int quantity = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_QUANTITY);
-            int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_CREAM);
-            int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_HASTOPPING);
+            int Puresoil = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_CREAM);
+            int Inpot = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_HASTOPPING);
 
 
             String nameofdrink = cursor.getString(name);
             String priceofdrink = cursor.getString(price);
             String quantityofdrink = cursor.getString(quantity);
-            String yeshasCream = cursor.getString(hasCream);
-            String yeshastopping = cursor.getString(hasTopping);
+            String yesPuresoil = cursor.getString(Puresoil);
+            String yesInpot = cursor.getString(Inpot);
 
             drinnkName.setText(nameofdrink);
             coffeePrice.setText(priceofdrink);

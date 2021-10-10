@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -69,7 +70,7 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public void onClick(View v) {
                 // coffee price
-                int basePrice = 1;
+                int basePrice = 5;
                 quantity++;
                 displayQuantity();
                 int coffePrice = basePrice * quantity;
@@ -89,7 +90,7 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public void onClick(View v) {
 
-                int basePrice = 1;
+                int basePrice = 2;
                 // because we dont want the quantity go less than 0
                 if (quantity == 0) {
                     Toast.makeText(InfoActivity.this, "Cant decrease quantity < 0", Toast.LENGTH_SHORT).show();
@@ -104,7 +105,7 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
                     // checkBoxes functionality
 
                     int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
-                    coffeePrice.setText("$ " + ifCheckBox);
+                    coffeePrice.setText("sq.foot " + ifCheckBox);
                 }
             }
         });
@@ -126,25 +127,25 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
         values.put(OrderContract.OrderEntry.COLUMN_QUANTITY, quantity);
 
         if (addExtraCream.isChecked()) {
-            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Has Cream: YES");
+            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Pure soil: YES");
         } else {
-            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Has Cream: NO");
+            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Pure Soil: NO");
 
         }
 
         if (addToppings.isChecked()) {
-            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "Has Toppings: YES");
+            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "In Pot: YES");
         } else {
-            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "Has Toppings: NO");
+            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "In pot: NO");
 
         }
 
         if (mCurrentCartUri == null) {
             Uri newUri = getContentResolver().insert(OrderContract.OrderEntry.CONTENT_URI, values);
             if (newUri==null) {
-                Toast.makeText(this, "Failed to add to List", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Failed to add to Cart", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Success  adding to List", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Success  adding to Cart", Toast.LENGTH_SHORT).show();
 
             }
          }
@@ -156,7 +157,7 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private int CalculatePrice(CheckBox addExtraCream, CheckBox addToppings) {
 
-        int basePrice = 1;
+        int basePrice = 2;
 
         if (addExtraCream.isChecked()) {
             // add the cream cost $2
@@ -204,19 +205,20 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
             int name = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_NAME);
             int price = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_PRICE);
             int quantity = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_QUANTITY);
-            int Puresoil = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_CREAM);
-            int Inpot = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_HASTOPPING);
+            int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_CREAM);
+            int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_HASTOPPING);
 
 
             String nameofdrink = cursor.getString(name);
             String priceofdrink = cursor.getString(price);
             String quantityofdrink = cursor.getString(quantity);
-            String yeshasCream = cursor.getString(Puresoil);
-            String yeshastopping = cursor.getString(Inpot);
+            String yeshasCream = cursor.getString(hasCream);
+            String yeshastopping = cursor.getString(hasTopping);
 
             drinnkName.setText(nameofdrink);
             coffeePrice.setText(priceofdrink);
             quantitynumber.setText(quantityofdrink);
+
         }
 
 

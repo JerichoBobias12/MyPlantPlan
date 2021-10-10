@@ -28,14 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
         modelList = new ArrayList<>();
         modelList.add(new Model("Carrot", getString(R.string.Carrrots), R.drawable.carrot ));
-        modelList.add(new Model("Raddish", getString(R.string.latte), R.drawable.rad));
-        modelList.add(new Model("Tomato", getString(R.string.orangesmoothie), R.drawable.carrot));
-        modelList.add(new Model("Squash", getString(R.string.orangevanilla), R.drawable.carrot));
-        modelList.add(new Model("Eggplant", getString(R.string.cappcuni), R.drawable.carrot));
-        modelList.add(new Model("Stringbeans", getString(R.string.thaitea), R.drawable.carrot));
-        modelList.add(new Model("Onion", getString(R.string.tea), R.drawable.carrot));
-        modelList.add(new Model("Garlic", getString(R.string.bubbletea), R.drawable.rad));
-        modelList.add(new Model("Pepper", getString(R.string.match), R.drawable.rad));
+        modelList.add(new Model("Raddish", getString(R.string.Raddish), R.drawable.rad));
+        modelList.add(new Model("Tomato", getString(R.string.orangesmoothie), R.drawable.tom));
+        modelList.add(new Model("Squash", getString(R.string.orangevanilla), R.drawable.squash));
+        modelList.add(new Model("Eggplant", getString(R.string.cappcuni), R.drawable.eg));
+        modelList.add(new Model("Stringbeans", getString(R.string.thaitea), R.drawable.str));
+        modelList.add(new Model("Onion", getString(R.string.tea), R.drawable.oni));
+        modelList.add(new Model("Garlic", getString(R.string.bubbletea), R.drawable.gg));
+        modelList.add(new Model("Pepper", getString(R.string.match), R.drawable.sili));
 
         // recyclerview
         recyclerView = findViewById(R.id.recyclerView);
